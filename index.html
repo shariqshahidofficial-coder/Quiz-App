@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Digital Clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+    <div class="scanlines"></div>
+    
+    <header>
+        <div class="logo">NEO-CLOCK<span> v1.0</span></div>
+        <button id="theme-toggle" class="glitch-btn" data-text="TOGGLE THEME">TOGGLE THEME</button>
+    </header>
+
+    <main>
+        <section class="main-clock">
+            <div id="date-display" class="date-glow">SUNDAY, JUNE 7, 2026</div>
+            <div id="time-display" class="time-glow">00:00:00</div>
+            <div class="clock-label">LOCAL TIME // SYSTEM STABLE</div>
+        </section>
+
+        <section class="world-clocks">
+            <h2>WORLD TIME ZONES</h2>
+            <div class="grid" id="world-grid">
+                <!-- World clocks will be injected here -->
+            </div>
+        </section>
+
+        <section class="alarms">
+            <h2>ALARM MODULE</h2>
+            <div class="alarm-controls">
+                <input type="time" id="alarm-time" step="1">
+                <button id="add-alarm" class="neon-btn">SET ALARM</button>
+            </div>
+            <ul id="alarm-list">
+                <!-- Alarms will be listed here -->
+            </ul>
+        </section>
+    </main>
+
+    <div id="alarm-overlay" class="hidden">
+        <div class="alarm-modal">
+            <h1 class="glitch" data-text="ALARM TRIGGERED">ALARM TRIGGERED</h1>
+            <p>CRITICAL TIME ALERT</p>
+            <button id="dismiss-alarm" class="glitch-btn" data-text="DISMISS">DISMISS</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
